@@ -2,9 +2,6 @@
   <ItemGroup>
     <ClCompile Include="mediaHelper.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="mediaHelper.hpp" />
-  </ItemGroup>
   <PropertyGroup>
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
