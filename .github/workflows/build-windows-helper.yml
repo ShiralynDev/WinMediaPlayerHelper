@@ -1,0 +1,24 @@
+name: Build Windows Helper
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup C++ environment
+      uses: actions/setup-msbuild@v1
+
+    - name: Build mediaHelper
+      shell: powershell
+      run: |
+        cmake -S . -B build -A x64
+        cmake --build build --config Release
+        Copy-Item build\Release\mediaHelper.exe mediaHelper.exe
