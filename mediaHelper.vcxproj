@@ -23,6 +23,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
+    <CPPLanguageStandard>stdcpp17</C++LanguageStandard>
     <CharacterSet>Unicode</CharacterSet>
     <OutDir>$(SolutionDir)bin\Debug\x64\</OutDir>
     <TargetName>mediaHelper</TargetName>
@@ -32,6 +33,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
+    <LanguageStandard>stdcpp17</LanguageStandard>
     <CharacterSet>Unicode</CharacterSet>
     <OutDir>$(SolutionDir)bin\Release\x64\</OutDir>
     <TargetName>mediaHelper</TargetName>
