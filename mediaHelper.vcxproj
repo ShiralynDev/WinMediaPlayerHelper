@@ -16,6 +16,9 @@
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ClCompile>
+    <AdditionalOptions>/std:c++17 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>    
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
@@ -26,6 +29,9 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ClCompile>
+    <AdditionalOptions>/std:c++17 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile> 
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
