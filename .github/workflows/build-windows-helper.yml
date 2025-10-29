@@ -1,4 +1,4 @@
-name: Build Windows Helper
+name: Build MediaHelper
 
 on:
   push:
@@ -13,12 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Setup C++ environment
-      uses: actions/setup-msbuild@v1
+    - name: Setup Visual Studio environment
+      run: |
+        call "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
 
     - name: Build mediaHelper
-      shell: powershell
       run: |
-        cmake -S . -B build -A x64
-        cmake --build build --config Release
-        Copy-Item build\Release\mediaHelper.exe mediaHelper.exe
+        msbuild mediaHelper.sln /p:Configuration=Release /p:Platform=x64
