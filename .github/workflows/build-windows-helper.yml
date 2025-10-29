@@ -19,4 +19,4 @@ jobs:
 
     - name: Build mediaHelper
       shell: cmd
-      run: '"C:\Program Files\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MSBuild.exe" mediaHelper.sln /p:Configuration=Release /p:Platform=x64'
+      run: 'msbuild mediaHelper.sln /p:Configuration=Release /p:Platform=x64'
