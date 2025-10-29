@@ -19,4 +19,4 @@ jobs:
 
     - name: Build mediaHelper
       shell: cmd
-      run: 'msbuild mediaHelper.sln /p:Configuration=Release /p:Platform=x64'
+      run: 'msbuild mediaHelper.sln /p:Configuration=Release /p:Platform=x64 /p:CLToolExe=cl.exe /p:CLToolVersion=Latest /p:CLToolAdditionalOptions="/std:c++17'
