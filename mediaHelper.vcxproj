@@ -15,6 +15,10 @@
     </ProjectConfiguration>
   </ItemGroup>
 
+  <PropertyGroup>
+    <C++LanguageStandard>stdcpp17</C++LanguageStandard>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
