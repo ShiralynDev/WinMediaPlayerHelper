@@ -13,10 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Setup Visual Studio environment
-      shell: pwsh
-      run: '& "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64'
-
     - name: Build mediaHelper
       run: |
         msbuild mediaHelper.sln /p:Configuration=Release /p:Platform=x64
