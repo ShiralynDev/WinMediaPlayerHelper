@@ -11,8 +11,12 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1
 
     - name: Build mediaHelper
-      run: |
-        msbuild mediaHelper.sln /p:Configuration=Release /p:Platform=x64
+      shell: cmd
+      run: '"%ProgramFiles(x86)%\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MSBuild.exe" mediaHelper.sln /p:Configuration=Release /p:Platform=x64'
